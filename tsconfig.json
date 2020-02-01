@@ -15,7 +15,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@arrange-list-game/arrange-list": ["libs/arrange-list/src/index.ts"],
+      "@arrange-list-game/bbb-feature-shell": [
+        "libs/bbb-feature-shell/src/index.ts"
+      ],
+      "@arrange-list-game/mock-data": ["libs/mock-data/src/index.ts"],
+      "@arrange-list-game/shared/list": ["libs/shared/list/src/index.ts"],
+      "@arrange-list-game/quran-feature-shell": [
+        "libs/quran-feature-shell/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

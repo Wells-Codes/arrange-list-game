@@ -122,6 +122,284 @@
           }
         }
       }
+    },
+    "arrange-list": {
+      "projectType": "library",
+      "root": "libs/arrange-list",
+      "sourceRoot": "libs/arrange-list/src",
+      "prefix": "arrange-list-game",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/arrange-list/tsconfig.lib.json",
+              "libs/arrange-list/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/arrange-list/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/arrange-list/jest.config.js",
+            "tsConfig": "libs/arrange-list/tsconfig.spec.json",
+            "setupFile": "libs/arrange-list/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "bbb-feature-shell": {
+      "projectType": "library",
+      "root": "libs/bbb-feature-shell",
+      "sourceRoot": "libs/bbb-feature-shell/src",
+      "prefix": "arrange-list-game",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/bbb-feature-shell/tsconfig.lib.json",
+              "libs/bbb-feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/bbb-feature-shell/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/bbb-feature-shell/jest.config.js",
+            "tsConfig": "libs/bbb-feature-shell/tsconfig.spec.json",
+            "setupFile": "libs/bbb-feature-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "mock-data": {
+      "projectType": "library",
+      "root": "libs/mock-data",
+      "sourceRoot": "libs/mock-data/src",
+      "prefix": "arrange-list-game",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/mock-data/tsconfig.lib.json",
+              "libs/mock-data/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/mock-data/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/mock-data/jest.config.js",
+            "tsConfig": "libs/mock-data/tsconfig.spec.json",
+            "setupFile": "libs/mock-data/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-list": {
+      "projectType": "library",
+      "root": "libs/shared/list",
+      "sourceRoot": "libs/shared/list/src",
+      "prefix": "arrange-list-game",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/list/tsconfig.lib.json",
+              "libs/shared/list/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/list/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/list/jest.config.js",
+            "tsConfig": "libs/shared/list/tsconfig.spec.json",
+            "setupFile": "libs/shared/list/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "quran-chapters": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/quran-chapters",
+      "sourceRoot": "apps/quran-chapters/src",
+      "prefix": "arrange-list-game",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/quran-chapters",
+            "index": "apps/quran-chapters/src/index.html",
+            "main": "apps/quran-chapters/src/main.ts",
+            "polyfills": "apps/quran-chapters/src/polyfills.ts",
+            "tsConfig": "apps/quran-chapters/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/quran-chapters/src/favicon.ico",
+              "apps/quran-chapters/src/assets"
+            ],
+            "styles": ["apps/quran-chapters/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/quran-chapters/src/environments/environment.ts",
+                  "with": "apps/quran-chapters/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "quran-chapters:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "quran-chapters:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "quran-chapters:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/quran-chapters/tsconfig.app.json",
+              "apps/quran-chapters/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/quran-chapters/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/quran-chapters/jest.config.js",
+            "tsConfig": "apps/quran-chapters/tsconfig.spec.json",
+            "setupFile": "apps/quran-chapters/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "quran-chapters-e2e": {
+      "root": "apps/quran-chapters-e2e",
+      "sourceRoot": "apps/quran-chapters-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/quran-chapters-e2e/cypress.json",
+            "tsConfig": "apps/quran-chapters-e2e/tsconfig.e2e.json",
+            "devServerTarget": "quran-chapters:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "quran-chapters:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/quran-chapters-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/quran-chapters-e2e/**"]
+          }
+        }
+      }
+    },
+    "quran-feature-shell": {
+      "projectType": "library",
+      "root": "libs/quran-feature-shell",
+      "sourceRoot": "libs/quran-feature-shell/src",
+      "prefix": "arrange-list-game",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/quran-feature-shell/tsconfig.lib.json",
+              "libs/quran-feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/quran-feature-shell/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/quran-feature-shell/jest.config.js",
+            "tsConfig": "libs/quran-feature-shell/tsconfig.spec.json",
+            "setupFile": "libs/quran-feature-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

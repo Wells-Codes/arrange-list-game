@@ -7,3 +7,20 @@ This is a game where you have a list of items that have a correct order. You mus
 ## Architecture
 
 This is a monorepo using Nx. The plan is to have multiple apps that use the same core libraries. The plan is to create a web app using Angular Material and a mobile app using Ionic.
+
+apps
+bible-book-blitz
+bbb-desktop
+src/lib
+bbb-mobile
+src/lib
+
+cricket-stats
+src/lib
+
+libs
+arrange-list
+bbb-feature-shell
+leaderboard
+mock-data
+time-tracker

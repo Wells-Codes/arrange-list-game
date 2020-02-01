@@ -1,0 +1,13 @@
+<!-- Listing data -->
+Is complete: {{ complete }}
+
+<mat-list>
+  <strong>Name of List:</strong>
+  <div cdkDropList (cdkDropListDropped)="drop($event)">
+    <mat-list-item *ngFor="let item of gameList" cdkDrag>
+      {{ item.name }}
+    </mat-list-item>
+  </div>
+</mat-list>
+
+{{ list | json }}

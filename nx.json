@@ -12,11 +12,33 @@
   },
   "projects": {
     "bible-book-blitz": {
-      "tags": []
+      "tags": ["scope:bbb", "type:app"]
     },
     "bible-book-blitz-e2e": {
-      "tags": [],
+      "tags": ["scope:bbb"],
       "implicitDependencies": ["bible-book-blitz"]
+    },
+    "arrange-list": {
+      "tags": ["scope:shared", "type:ui"]
+    },
+    "bbb-feature-shell": {
+      "tags": ["scope:bbb", "type:feature"]
+    },
+    "mock-data": {
+      "tags": ["scope:shared"]
+    },
+    "shared-list": {
+      "tags": ["scope:shared"]
+    },
+    "quran-chapters": {
+      "tags": ["scope:quran"]
+    },
+    "quran-chapters-e2e": {
+      "tags": ["scope:quran"],
+      "implicitDependencies": ["quran-chapters"]
+    },
+    "quran-feature-shell": {
+      "tags": ["scope:quran"]
     }
   }
 }
