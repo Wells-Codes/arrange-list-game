@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "projects": {
+    "bible-book-blitz": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/bible-book-blitz",
+      "sourceRoot": "apps/bible-book-blitz/src",
+      "prefix": "arrange-list-game",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/bible-book-blitz",
+            "index": "apps/bible-book-blitz/src/index.html",
+            "main": "apps/bible-book-blitz/src/main.ts",
+            "polyfills": "apps/bible-book-blitz/src/polyfills.ts",
+            "tsConfig": "apps/bible-book-blitz/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/bible-book-blitz/src/favicon.ico",
+              "apps/bible-book-blitz/src/assets"
+            ],
+            "styles": ["apps/bible-book-blitz/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/bible-book-blitz/src/environments/environment.ts",
+                  "with": "apps/bible-book-blitz/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "bible-book-blitz:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "bible-book-blitz:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "bible-book-blitz:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/bible-book-blitz/tsconfig.app.json",
+              "apps/bible-book-blitz/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/bible-book-blitz/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/bible-book-blitz/jest.config.js",
+            "tsConfig": "apps/bible-book-blitz/tsconfig.spec.json",
+            "setupFile": "apps/bible-book-blitz/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "bible-book-blitz-e2e": {
+      "root": "apps/bible-book-blitz-e2e",
+      "sourceRoot": "apps/bible-book-blitz-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/bible-book-blitz-e2e/cypress.json",
+            "tsConfig": "apps/bible-book-blitz-e2e/tsconfig.e2e.json",
+            "devServerTarget": "bible-book-blitz:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "bible-book-blitz:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/bible-book-blitz-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/bible-book-blitz-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "bible-book-blitz"
+}

@@ -1,0 +1,22 @@
+{
+  "npmScope": "arrange-list-game",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "bible-book-blitz": {
+      "tags": []
+    },
+    "bible-book-blitz-e2e": {
+      "tags": [],
+      "implicitDependencies": ["bible-book-blitz"]
+    }
+  }
+}
