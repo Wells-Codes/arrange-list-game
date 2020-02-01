@@ -20,7 +20,7 @@
             "main": "apps/bible-book-blitz/src/main.ts",
             "polyfills": "apps/bible-book-blitz/src/polyfills.ts",
             "tsConfig": "apps/bible-book-blitz/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "apps/bible-book-blitz/src/favicon.ico",
               "apps/bible-book-blitz/src/assets"
@@ -41,7 +41,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
