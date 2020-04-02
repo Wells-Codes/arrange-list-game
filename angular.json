@@ -25,7 +25,9 @@
               "apps/bible-book-blitz/src/favicon.ico",
               "apps/bible-book-blitz/src/assets"
             ],
-            "styles": ["apps/bible-book-blitz/src/styles.scss"],
+            "styles": [
+              "apps/bible-book-blitz/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +85,10 @@
               "apps/bible-book-blitz/tsconfig.app.json",
               "apps/bible-book-blitz/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/bible-book-blitz/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/bible-book-blitz/**"
+            ]
           }
         },
         "test": {
@@ -117,8 +122,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/bible-book-blitz-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/bible-book-blitz-e2e/**"]
+            "tsConfig": [
+              "apps/bible-book-blitz-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/bible-book-blitz-e2e/**"
+            ]
           }
         }
       }
@@ -136,7 +146,10 @@
               "libs/arrange-list/tsconfig.lib.json",
               "libs/arrange-list/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/arrange-list/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/arrange-list/**"
+            ]
           }
         },
         "test": {
@@ -167,7 +180,10 @@
               "libs/bbb-feature-shell/tsconfig.lib.json",
               "libs/bbb-feature-shell/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/bbb-feature-shell/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/bbb-feature-shell/**"
+            ]
           }
         },
         "test": {
@@ -198,7 +214,10 @@
               "libs/mock-data/tsconfig.lib.json",
               "libs/mock-data/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/mock-data/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/mock-data/**"
+            ]
           }
         },
         "test": {
@@ -229,7 +248,10 @@
               "libs/shared/list/tsconfig.lib.json",
               "libs/shared/list/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/list/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/list/**"
+            ]
           }
         },
         "test": {
@@ -271,7 +293,9 @@
               "apps/quran-chapters/src/favicon.ico",
               "apps/quran-chapters/src/assets"
             ],
-            "styles": ["apps/quran-chapters/src/styles.scss"],
+            "styles": [
+              "apps/quran-chapters/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -330,7 +354,10 @@
               "apps/quran-chapters/tsconfig.app.json",
               "apps/quran-chapters/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/quran-chapters/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/quran-chapters/**"
+            ]
           }
         },
         "test": {
@@ -364,8 +391,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/quran-chapters-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/quran-chapters-e2e/**"]
+            "tsConfig": [
+              "apps/quran-chapters-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/quran-chapters-e2e/**"
+            ]
           }
         }
       }
@@ -383,7 +415,10 @@
               "libs/quran-feature-shell/tsconfig.lib.json",
               "libs/quran-feature-shell/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/quran-feature-shell/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/quran-feature-shell/**"
+            ]
           }
         },
         "test": {
@@ -403,7 +438,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "7f5e91e9-6062-4602-aec5-eefda223ea77"
   },
   "schematics": {
     "@nrwl/angular:application": {
