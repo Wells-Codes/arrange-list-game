@@ -25,9 +25,7 @@
               "apps/bible-book-blitz/src/favicon.ico",
               "apps/bible-book-blitz/src/assets"
             ],
-            "styles": [
-              "apps/bible-book-blitz/src/styles.scss"
-            ],
+            "styles": ["apps/bible-book-blitz/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -85,10 +83,7 @@
               "apps/bible-book-blitz/tsconfig.app.json",
               "apps/bible-book-blitz/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/bible-book-blitz/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/bible-book-blitz/**"]
           }
         },
         "test": {
@@ -96,7 +91,8 @@
           "options": {
             "jestConfig": "apps/bible-book-blitz/jest.config.js",
             "tsConfig": "apps/bible-book-blitz/tsconfig.spec.json",
-            "setupFile": "apps/bible-book-blitz/src/test-setup.ts"
+            "setupFile": "apps/bible-book-blitz/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       }
@@ -122,13 +118,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/bible-book-blitz-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/bible-book-blitz-e2e/**"
-            ]
+            "tsConfig": ["apps/bible-book-blitz-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/bible-book-blitz-e2e/**"]
           }
         }
       }
@@ -146,10 +137,7 @@
               "libs/arrange-list/tsconfig.lib.json",
               "libs/arrange-list/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/arrange-list/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/arrange-list/**"]
           }
         },
         "test": {
@@ -157,7 +145,8 @@
           "options": {
             "jestConfig": "libs/arrange-list/jest.config.js",
             "tsConfig": "libs/arrange-list/tsconfig.spec.json",
-            "setupFile": "libs/arrange-list/src/test-setup.ts"
+            "setupFile": "libs/arrange-list/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -180,10 +169,7 @@
               "libs/bbb-feature-shell/tsconfig.lib.json",
               "libs/bbb-feature-shell/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/bbb-feature-shell/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/bbb-feature-shell/**"]
           }
         },
         "test": {
@@ -191,7 +177,8 @@
           "options": {
             "jestConfig": "libs/bbb-feature-shell/jest.config.js",
             "tsConfig": "libs/bbb-feature-shell/tsconfig.spec.json",
-            "setupFile": "libs/bbb-feature-shell/src/test-setup.ts"
+            "setupFile": "libs/bbb-feature-shell/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -214,10 +201,7 @@
               "libs/mock-data/tsconfig.lib.json",
               "libs/mock-data/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/mock-data/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/mock-data/**"]
           }
         },
         "test": {
@@ -225,7 +209,8 @@
           "options": {
             "jestConfig": "libs/mock-data/jest.config.js",
             "tsConfig": "libs/mock-data/tsconfig.spec.json",
-            "setupFile": "libs/mock-data/src/test-setup.ts"
+            "setupFile": "libs/mock-data/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -248,10 +233,7 @@
               "libs/shared/list/tsconfig.lib.json",
               "libs/shared/list/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/list/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/list/**"]
           }
         },
         "test": {
@@ -259,7 +241,8 @@
           "options": {
             "jestConfig": "libs/shared/list/jest.config.js",
             "tsConfig": "libs/shared/list/tsconfig.spec.json",
-            "setupFile": "libs/shared/list/src/test-setup.ts"
+            "setupFile": "libs/shared/list/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -293,9 +276,7 @@
               "apps/quran-chapters/src/favicon.ico",
               "apps/quran-chapters/src/assets"
             ],
-            "styles": [
-              "apps/quran-chapters/src/styles.scss"
-            ],
+            "styles": ["apps/quran-chapters/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -354,10 +335,7 @@
               "apps/quran-chapters/tsconfig.app.json",
               "apps/quran-chapters/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/quran-chapters/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/quran-chapters/**"]
           }
         },
         "test": {
@@ -365,7 +343,8 @@
           "options": {
             "jestConfig": "apps/quran-chapters/jest.config.js",
             "tsConfig": "apps/quran-chapters/tsconfig.spec.json",
-            "setupFile": "apps/quran-chapters/src/test-setup.ts"
+            "setupFile": "apps/quran-chapters/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       }
@@ -391,13 +370,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/quran-chapters-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/quran-chapters-e2e/**"
-            ]
+            "tsConfig": ["apps/quran-chapters-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/quran-chapters-e2e/**"]
           }
         }
       }
@@ -415,10 +389,7 @@
               "libs/quran-feature-shell/tsconfig.lib.json",
               "libs/quran-feature-shell/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/quran-feature-shell/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/quran-feature-shell/**"]
           }
         },
         "test": {
@@ -426,7 +397,8 @@
           "options": {
             "jestConfig": "libs/quran-feature-shell/jest.config.js",
             "tsConfig": "libs/quran-feature-shell/tsconfig.spec.json",
-            "setupFile": "libs/quran-feature-shell/src/test-setup.ts"
+            "setupFile": "libs/quran-feature-shell/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },

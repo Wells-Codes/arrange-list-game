@@ -3,5 +3,8 @@
   "rules": {
     "directive-selector": [true, "attribute", "arrangeListGame", "camelCase"],
     "component-selector": [true, "element", "arrange-list-game", "kebab-case"]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
   }
 }
