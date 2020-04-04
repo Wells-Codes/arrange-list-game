@@ -91,7 +91,8 @@
           "options": {
             "jestConfig": "apps/bible-book-blitz/jest.config.js",
             "tsConfig": "apps/bible-book-blitz/tsconfig.spec.json",
-            "setupFile": "apps/bible-book-blitz/src/test-setup.ts"
+            "setupFile": "apps/bible-book-blitz/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       }
@@ -144,7 +145,8 @@
           "options": {
             "jestConfig": "libs/arrange-list/jest.config.js",
             "tsConfig": "libs/arrange-list/tsconfig.spec.json",
-            "setupFile": "libs/arrange-list/src/test-setup.ts"
+            "setupFile": "libs/arrange-list/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -175,7 +177,8 @@
           "options": {
             "jestConfig": "libs/bbb-feature-shell/jest.config.js",
             "tsConfig": "libs/bbb-feature-shell/tsconfig.spec.json",
-            "setupFile": "libs/bbb-feature-shell/src/test-setup.ts"
+            "setupFile": "libs/bbb-feature-shell/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -206,7 +209,8 @@
           "options": {
             "jestConfig": "libs/mock-data/jest.config.js",
             "tsConfig": "libs/mock-data/tsconfig.spec.json",
-            "setupFile": "libs/mock-data/src/test-setup.ts"
+            "setupFile": "libs/mock-data/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -237,7 +241,8 @@
           "options": {
             "jestConfig": "libs/shared/list/jest.config.js",
             "tsConfig": "libs/shared/list/tsconfig.spec.json",
-            "setupFile": "libs/shared/list/src/test-setup.ts"
+            "setupFile": "libs/shared/list/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -338,7 +343,8 @@
           "options": {
             "jestConfig": "apps/quran-chapters/jest.config.js",
             "tsConfig": "apps/quran-chapters/tsconfig.spec.json",
-            "setupFile": "apps/quran-chapters/src/test-setup.ts"
+            "setupFile": "apps/quran-chapters/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       }
@@ -391,7 +397,8 @@
           "options": {
             "jestConfig": "libs/quran-feature-shell/jest.config.js",
             "tsConfig": "libs/quran-feature-shell/tsconfig.spec.json",
-            "setupFile": "libs/quran-feature-shell/src/test-setup.ts"
+            "setupFile": "libs/quran-feature-shell/src/test-setup.ts",
+            "passWithNoTests": true
           }
         }
       },
@@ -403,7 +410,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "7f5e91e9-6062-4602-aec5-eefda223ea77"
   },
   "schematics": {
     "@nrwl/angular:application": {
